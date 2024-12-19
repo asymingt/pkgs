@@ -16,6 +16,7 @@ steps:
         tar xzf nvidia.tar.gz --strip-components=1
     build:
       - |
+        cd kernel-open
         make -j $(nproc) SYSSRC=/src
     install:
       - |
